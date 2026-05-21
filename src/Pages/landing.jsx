@@ -26,8 +26,10 @@ const Landing = () => {
           transition={{ delay: 0.2 }}
         >
 
-            <h1 className="heading-lg">Connaître - To Know</h1>
-            <p>To understand your guests better and drive business growth.</p>
+            <h1 className="heading-lg">InnSight AI - Hotel Booking Segmentation</h1>
+            <p>An AI customer segmentation platform that predicts hotel guest behavior clusters using a machine learning model trained on booking data. 
+                It also provides a dashboard and landing experience that visualizes insights like guest segments, revenue patterns, and cancellation risk 
+                for hospitality decision-making.</p>
 
         </motion.section>
 

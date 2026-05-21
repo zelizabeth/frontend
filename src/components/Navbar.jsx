@@ -35,7 +35,7 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Logo/Title Section */}
       <Link to="/" className="navbar-logo">
-        🏨 Connaître
+        🏨 InnSight AI
       </Link>
 
       {/* Navigation Links */}
