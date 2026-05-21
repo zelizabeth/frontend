@@ -1,0 +1,202 @@
+/**
+ * CLUSTER CARD RESULT STYLES
+ * Luxury styling for displaying prediction results
+ */
+
+.cluster-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(26, 31, 58, 0.9), rgba(26, 31, 58, 0.7));
+  border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Cluster Header */
+.cluster-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cluster-icon {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 12px;
+}
+
+.cluster-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #d4af37;
+  margin-bottom: 0.25rem;
+}
+
+.cluster-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Divider Line */
+.cluster-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 175, 55, 0.3),
+    transparent
+  );
+  margin: 1.5rem 0;
+}
+
+/* Section Styles */
+.cluster-section {
+  margin-bottom: 1.75rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.strategy-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Strategy Badge */
+.strategy-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+  color: var(--bg-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Characteristics List */
+.characteristics-list {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.characteristics-list li {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: rgba(212, 175, 55, 0.05);
+  border-left: 3px solid var(--accent-gold);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.characteristics-list li:hover {
+  background-color: rgba(212, 175, 55, 0.1);
+  transform: translateX(5px);
+}
+
+/* Recommendations List */
+.recommendations-list {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.recommendation-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: rgba(16, 185, 129, 0.05);
+  border-left: 3px solid var(--success);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.recommendation-item:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+  transform: translateX(5px);
+}
+
+.bullet {
+  color: var(--success);
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Footer Note */
+.cluster-footer {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* Animation on Mount */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cluster-card {
+  animation: slideInUp 0.5s ease-out;
+}
+
+/* Glow Effect */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+  }
+}
+
+.card-gold-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cluster-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cluster-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .cluster-name {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,119 @@
+/**
+ * NAVBAR STYLES - Minimal Floating Glassmorphism
+ * 
+ * Features:
+ * - Fixed floating position at top
+ * - Dark translucent glassmorphic background
+ * - Gold hover effects
+ * - Smooth transitions
+ */
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  
+  /* Glassmorphism effect */
+  background: rgba(10, 14, 39, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  
+  /* Shadow for depth */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  
+  /* Flex layout for horizontal navigation */
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Logo/Title Section */
+.navbar-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #d4af37;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-logo:hover {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* Navigation Links Container */
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Individual Navigation Link */
+.navbar-link {
+  text-decoration: none;
+  color: #e8e8e8;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.navbar-link:hover {
+  color: #d4af37;
+}
+
+/* Underline effect on hover */
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #d4af37, #e8d5b7);
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+/* Active link indicator */
+.navbar-link.active {
+  color: #d4af37;
+}
+
+.navbar-link.active::after {
+  width: 100%;
+}
+
+/* Mobile responsive navbar */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.75rem 1.25rem;
+    gap: 1.5rem;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .navbar-logo {
+    font-size: 1rem;
+  }
+  
+  .navbar-links {
+    gap: 1rem;
+  }
+  
+  .navbar-link {
+    font-size: 0.85rem;
+  }
+}

@@ -43,12 +43,3 @@ function App() {
 }
 
 export default App;
-        </button>
-
-        <h2>Cluster: {result.cluster}</h2>
-        <h3>Segment: {result.segment}</h3>        
-                </div>
-    );
-    }
-
-    export default App;
