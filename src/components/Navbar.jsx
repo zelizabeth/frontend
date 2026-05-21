@@ -35,7 +35,7 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Logo/Title Section */}
       <Link to="/" className="navbar-logo">
-        🏨 LUXE
+        🏨 Connaître
       </Link>
 
       {/* Navigation Links */}
@@ -43,8 +43,8 @@ const Navbar = () => {
         {/* Predict Page Link */}
         <li>
           <Link
-            to="/"
-            className={`navbar-link ${isActive('/') ? 'active' : ''}`}
+            to="/Ppredict"
+            className={`navbar-link ${isActive('/Ppredict') ? 'active' : ''}`}
           >
             Predict
           </Link>

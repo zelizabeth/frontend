@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Ppredict from './Pages/Ppredict';
 import Dashboard from './Pages/Dashboard';
 import Insights from './Pages/Insights';
+import Landing from "./Pages/landing";
 import './App.css';
 
 /**
@@ -29,13 +30,16 @@ function App() {
         {/* Routes define which page is shown based on URL */}
         <Routes>
           {/* Main prediction page - default route */}
-          <Route path="/" element={<Ppredict />} />
+          <Route path="/" element={<Landing />} />
           
           {/* Dashboard page - shows KPIs and charts */}
           <Route path="/dashboard" element={<Dashboard />} />
           
           {/* Insights page - detailed analysis and cluster info */}
           <Route path="/insights" element={<Insights />} />
+          
+          {/* Landing page */}
+          <Route path="/Ppredict" element={<Ppredict />} />
         </Routes>
       </div>
     </Router>
